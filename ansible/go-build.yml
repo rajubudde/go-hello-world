@@ -1,6 +1,6 @@
 ---
 - name: Wait for ssh to come up
-  hosts: "{{ instance_name }}"
+  hosts: localhost
   become: false
   gather_facts: no
 
@@ -15,7 +15,7 @@
     #    delay: 30
 
 - name: Build and Test Go Application
-  hosts: "{{ instance_name }}"
+  hosts: localhost
   become: false
   gather_facts: yes
 

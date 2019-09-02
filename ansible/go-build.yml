@@ -1,8 +1,8 @@
 ---
 - name: Wait for ssh to come up
   hosts: localhost
-  become: false
-  gather_facts: no
+  become: yes
+  gather_facts: yes
 
   tasks:
     - wait_for_connection:
@@ -16,7 +16,7 @@
 
 - name: Build and Test Go Application
   hosts: localhost
-  become: false
+  become: yes
   gather_facts: yes
 
   tasks:
